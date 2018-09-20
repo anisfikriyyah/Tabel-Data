@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Anis Fox</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+  <body id="page-top">
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Tabel Data Buku</h2>
+            <p>Tabel ini berisikan data-data buku yang ada di dalam perpustakaan, antara lain:</p>            
+
+          <button type="button" class="btn btn-outline-primary mb-3" data-toggle="modal" data-target="#modalAdd"> <i class="fas fa-plus"></i> </button>
+          <form class="form-inline float-right">
+              <div class="form-group">
+                <input type="text" id="search" class="form-control" placeholder="search">
+                <button class="btn btn-outline-info ml-2"><i class="fas fa-search"></i></button>
+              </div>
+          </form>
+          <!-- Modal -->
+          <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modelTitleId">Tambah Buku</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <input type="text" id="kodeBuku" placeholder="Kode Buku" class="form-control mb-3">
+                  <input type="text" id="namaBuku" placeholder="Nama Buku" class="form-control mb-3">
+                  <input type="text" id="kodePengarang" placeholder="Kode Pengarang" class="form-control mb-3">
+                  <input type="text" id="kodePenerbit" placeholder="Kode Penerbit" class="form-control mb-3">
+                  <input type="text" id="kodeTipeBuku" placeholder="Kode Tipe Buku" class="form-control mb-3">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Batal</button>
+                  <button type="button" onclick="simpanBuku()" class="btn btn-outline-primary" data-dismiss="modal">Simpan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table table-bordered">
+            <thead>
+                <tr>
+                  <th>Kode Buku</th>
+                  <th>Nama Buku</th>
+                  <th>Kode Pengarang</th>
+                  <th>Kode Penerbit</th>
+                  <th>Kode Type Buku</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="showBuku"></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
